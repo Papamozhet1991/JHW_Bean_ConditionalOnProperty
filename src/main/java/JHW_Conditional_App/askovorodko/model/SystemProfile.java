@@ -1,4 +1,4 @@
-package JHW_Conditional_App.askovorodko;
+package JHW_Conditional_App.askovorodko.model;
 
 public interface SystemProfile {
     String getProfile();

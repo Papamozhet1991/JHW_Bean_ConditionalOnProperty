@@ -1,5 +1,4 @@
-package JHW_Conditional_App.askovorodko;
-
+import JHW_Conditional_App.askovorodko.AskovorodkoApplication;
 import JHW_Conditional_App.askovorodko.model.DevProfile;
 import JHW_Conditional_App.askovorodko.model.ProductionProfile;
 import org.junit.jupiter.api.Assertions;
@@ -19,16 +18,17 @@ class DemoApplicationTests {
     @Autowired
     TestRestTemplate restTemplate;
     @Container
-    private static GenericContainer<?> devApp = new GenericContainer<>("devapp")
+    private static GenericContainer<?> devApp = new GenericContainer<>("devapp:latest")
             .withExposedPorts(8080);
     @Container
-    private static GenericContainer<?> prodApp = new GenericContainer<>("prodapp")
+    private static GenericContainer<?> prodApp = new GenericContainer<>("prodapp:latest")
             .withExposedPorts(8081);
 
     @BeforeAll
     public static void setUp() {
-        devApp.start();
         prodApp.start();
+        devApp.start();
+
     }
 
     @Test

@@ -1,5 +1,6 @@
-package JHW_Conditional_App.askovorodko;
+package JHW_Conditional_App.askovorodko.controller;
 
+import JHW_Conditional_App.askovorodko.model.SystemProfile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
